@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/02 20:59:02 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/19 15:12:09 by jgigault         ###   ########.fr       */
+/*   Updated: 2015/03/19 15:15:38 by jgigault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void		wkw_display_controls(t_all *all)
 {
 	char		*str;
 
-	str = "NEW GAME: F1  -  QUIT: ESC / Q  -  PLAY: ARROW KEYS";
+	str = "NEW GAME: F1  -  QUIT: ESC / Q  -  MOVE: ARROW KEYS";
 	mvprintw(all->row - 4, all->col / 2 - 25, str);
 }
 
