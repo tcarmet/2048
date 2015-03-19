@@ -6,18 +6,18 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/02 20:57:12 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 21:04:44 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/03/19 15:03:43 by jgigault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
 
+# include <unistd.h>
 # include <stdlib.h>
 # include <ncurses.h>
 # include <strings.h>
-# include "libft.h"
-# include "time.h"
+# include <time.h>
 # define KEY_Q 113
 # define KEY_ECHAP 27
 # define MAP_SIZE 4
@@ -94,9 +94,16 @@ int				wkw_empty_check(t_all *all);
 int				wkw_game_over(t_all *all);
 int				wkw_check_argv(t_all *all, int argc, char **argv);
 void			wkw_gen_new_number(t_all *all);
+void			wkw_gen_new_number_init(t_all *all);
 void			wkw_display_menu(t_all *all);
-int				ft_rand_a_b(int a, int b);
 int				wkw_display_panel(t_all *all, int type);
 void			wkw_reinit_changes(t_all *all);
+size_t			ft_strlen(char const *str);
+void			ft_putchar(char c);
+void			ft_putendl(char *str, int fd);
+int				ft_atoi(char const *str);
+char			*ft_itoa(int n);
+char			*ft_strjoin(char const *s1, char const *s2);
+void			ft_putendl_fd(char *str, int fd);
 
 #endif

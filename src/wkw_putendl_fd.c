@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wkw_rand.c                                         :+:      :+:    :+:   */
+/*   wkw_putendl_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jgigault <jgigault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/02 21:02:36 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 21:02:36 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/03/19 14:17:04 by jgigault          #+#    #+#             */
+/*   Updated: 2015/03/19 14:32:47 by jgigault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
 
-int			ft_rand_a_b(int a, int b)
+void	ft_putendl_fd(char *str, int fd)
 {
-	return (rand() % (b - a) + a);
+	write(fd, str, ft_strlen(str));
 }

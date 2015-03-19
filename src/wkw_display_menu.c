@@ -6,11 +6,19 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/02 20:59:02 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 20:59:03 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/03/19 15:12:09 by jgigault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
+
+static void		wkw_display_controls(t_all *all)
+{
+	char		*str;
+
+	str = "NEW GAME: F1  -  QUIT: ESC / Q  -  PLAY: ARROW KEYS";
+	mvprintw(all->row - 4, all->col / 2 - 25, str);
+}
 
 static void		wkw_display_menu_bg(t_all *all)
 {
@@ -38,6 +46,7 @@ void			wkw_display_menu(t_all *all)
 	char		*str2;
 
 	wkw_display_menu_bg(all);
+	wkw_display_controls(all);
 	if (all->has_won == 1)
 		mvprintw(all->row - 2, 2, "CONGRATULATIONS! YOU WON");
 	if ((str1 = ft_itoa(all->score)))
