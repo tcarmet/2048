@@ -1,12 +1,12 @@
 # 2048
 
 <img align="right"  src="http://i.imgur.com/34nmcfc.png" width="45%" />
-This is a project of [Ecole 42](https://42.fr)
+This is a project of <a href="https://www.42.fr/" target="_blank" >Ecole 42</a>
 
 This game was made using the ncurses library. <br />
 You can now play 2048 on your terminal!! isn't that awesome?
 
-This project was made with : [jgigault](https://github.com/jgigault)
+This project was made with : <a href="https://github.com/jgigault" target="_blank">jgigault</a>
 <br /><br /><br /><br /><br /><br /><br /><br />
 ## Usage
 	$>  make
