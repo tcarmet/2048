@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/02 20:59:29 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 20:59:29 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/03/28 18:15:33 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ static int			wkw_get_color(int n)
 {
 	int count;
 
+	count = 0;
 	while (n > 2)
 	{
 		n /= 2;

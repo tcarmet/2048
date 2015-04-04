@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wkw_utils.c                                        :+:      :+:    :+:   */
+/*   wkw_memset.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/02 21:03:19 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 21:03:19 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/04 18:35:04 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/04 18:35:10 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
 
-int		wkw_tab_is_valid(int y, int x, t_all *all)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (y >= 0 && x >= 0 && y < all->map.size && x < all->map.size)
-		return (1);
-	return (0);
+	unsigned char	*i;
+
+	if (len == 0)
+		return (b);
+	i = (unsigned char *)b;
+	while (len--)
+	{
+		*i = (unsigned char)c;
+		if (len)
+			i++;
+	}
+	return (b);
 }

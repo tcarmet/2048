@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wkw_utils.c                                        :+:      :+:    :+:   */
+/*   wkw_memalloc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/02 21:03:19 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 21:03:19 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/04 18:35:30 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/04 18:35:37 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
 
-int		wkw_tab_is_valid(int y, int x, t_all *all)
+void	*ft_memalloc(size_t size)
 {
-	if (y >= 0 && x >= 0 && y < all->map.size && x < all->map.size)
-		return (1);
-	return (0);
+	void	*str;
+
+	if (!size)
+		return (NULL);
+	str = (void*)malloc(size);
+	if (!str)
+		return (NULL);
+	ft_bzero((void*)str, size);
+	return ((void*)str);
 }

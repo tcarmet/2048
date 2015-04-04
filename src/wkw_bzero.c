@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wkw_utils.c                                        :+:      :+:    :+:   */
+/*   wkw_bzero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/02 21:03:19 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 21:03:19 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/04 18:34:42 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/04 18:34:49 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
 
-int		wkw_tab_is_valid(int y, int x, t_all *all)
+void	ft_bzero(void *s, size_t n)
 {
-	if (y >= 0 && x >= 0 && y < all->map.size && x < all->map.size)
-		return (1);
-	return (0);
+	ft_memset(s, 0, n);
 }
