@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/02 20:58:11 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/02 20:58:11 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/04/05 01:19:54 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ int				main(int argc, char **argv)
 	if (wkw_init_ncurses() != STATUS_CONTINUE)
 		return (1);
 	wkw_init_pair();
-	srand(time(NULL));
 	wkw_display_ui(&all);
 	wkw_getch_loop(&all);
 	endwin();
